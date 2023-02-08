@@ -16,7 +16,7 @@ jobs:
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb
       MONGODB_CLUSTER_ADDRESS: 127.0.0.1:27017
-      MONGODB_USERNAME: mongodb
+      MONGODB_USERNAME: root
       MONGODB_PASSWORD: example
       PORT: 8080
     services:
@@ -24,6 +24,10 @@ jobs:
         image: mongo 
         ports: 
           - 27017:27017
+        env:
+          MONGO_INITDB_ROOT_USERNAME: root
+          MONGO_INITDB_ROOT_password: example
+
     steps:
       - name: Get Code
         uses: actions/checkout@v3
