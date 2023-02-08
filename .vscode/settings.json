@@ -1,3 +1,6 @@
 {
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///c%3A/Users/srbsa/Downloads/container/container/.github/workflows/deploy.yml"
+  }
 }
